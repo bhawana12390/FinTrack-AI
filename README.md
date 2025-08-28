@@ -29,8 +29,10 @@ Make sure you have the following installed on your system:
 ## Installation & Setup
 Clone the repository:
 
-```git clone https://github.com/your-username/FinTrack-AI.git```
-```cd FinTrack-AI```
+```
+git clone https://github.com/your-username/FinTrack-AI.git
+cd FinTrack-AI
+```
 
 ## Set up the Backend:
 
