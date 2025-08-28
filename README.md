@@ -88,7 +88,7 @@ Run the development server:
 npm run dev
 ```
 
-The application will be available at http://localhost:5173 (or another port if 5173 is busy).
+The application will be available at http://localhost:9002
 
 ## Building for Production
 To create a production-ready build of the frontend, run the following command in the root directory:
