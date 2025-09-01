@@ -59,38 +59,49 @@ FinTrack AI successfully provides a comprehensive and intelligent solution for p
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/bhawana12390/FinTrack-AI.git
+    cd FinTrack-AI
     ```
 
 2.  **Install dependencies:**
+
+   - Navigate to backend:
+     
     ```bash
+    cd backend
+    pip install -r requirements.txt
+    ```
+    
+   - Navigate back to main directory:
+     
+    ```bash
+    cd ..
     npm install
     ```
 
-3.  **Set up your Firebase Project:**
+4.  **Set up your Firebase Project:**
     *   Go to the [Firebase Console](https://console.firebase.google.com/) and create a new project.
     *   In your new project, go to **Project Settings** (click the gear icon ⚙️ next to "Project Overview").
     *   Under the "General" tab, in the "Your apps" section, click the web icon (`</>`) to create a new web app.
     *   Give your app a nickname and click "Register app".
     *   You will now see your Firebase configuration details (`apiKey`, `authDomain`, etc.). You will need these for the next step.
 
-4.  **Configure Environment Variables:**
+5.  **Configure Environment Variables:**
     *   In the project's root directory, create a new file named `.env.local`.
     *   Copy the contents of `.env.local.example` into your new `.env.local` file.
     *   Replace the placeholder values with the actual values from your Firebase project settings.
     *   You will also need a **Gemini API Key** for the AI features. You can get one from [Google AI Studio](https://aistudio.google.com/app/apikey). Add this key to your `.env.local` file as `GEMINI_API_KEY`.
 
-5.  **Enable Authentication Methods in Firebase:**
+6.  **Enable Authentication Methods in Firebase:**
     *   In the Firebase Console, go to **Build > Authentication**.
     *   Click the **Sign-in method** tab.
     *   Enable the **Email/Password** and **Google** providers. You will need to provide a project support email for the Google provider.
 
-6.  **Authorize Your Local Domain:**
+7.  **Authorize Your Local Domain:**
     *   While still in the Authentication section, click the **Settings** tab.
     *   Under **Authorized domains**, click **Add domain** and enter `localhost`.
 
-7.  **Run the development server:**
+8.  **Run the development server:**
     ```bash
     npm run dev
     ```
