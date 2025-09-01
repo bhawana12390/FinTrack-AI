@@ -21,7 +21,7 @@ FinTrack AI is a full-stack web application built with a modern, scalable, and A
 - **Generative AI**: The application's intelligence is powered by **Google's Generative AI models** (Gemini) accessed via the **Genkit** framework. This enables features such as:
     - **Voice Command Transcription**: Transcribing spoken commands into structured transaction data.
     - **AI Financial Advisor**: Analyzing spending patterns to generate personalized financial tips.
-    -**Spending Forecasts**: Predicting future spending against user-defined budgets.
+    - **Spending Forecasts**: Predicting future spending against user-defined budgets.
 
 - **PDF Statement Processing**: To handle the complex task of parsing PDF bank statements, a dedicated microservice was built using **Python** with the **FastAPI** framework. This backend service uses **PyMuPDF** to extract text and a custom parsing engine to identify and structure transactions, which are then sent to the Next.js frontend for user review.
 
@@ -97,6 +97,16 @@ FinTrack AI successfully provides a comprehensive and intelligent solution for p
     **Important**: You must restart your development server after creating or modifying the `.env.local` file for the changes to apply.
 
     Open [http://localhost:9002](http://localhost:9002) (or your configured port) to see the application.
+
+### Viewing Your Data in Firestore
+
+Once you've added some transactions and budgets through the app, you can view and manage the raw data directly in the Firebase Console:
+
+1.  Go to the [Firebase Console](https://console.firebase.google.com/) and select your project.
+2.  In the main navigation menu on the left, click **Build > Firestore Database**.
+3.  You will see a `users` collection. Click on it.
+4.  Each user is a "document" in this collection, identified by their unique user ID from Firebase Authentication. Click on a user ID to see their data.
+5.  Inside each user document, you will find the `transactions` and `budgets` sub-collections, where the individual records are stored.
 
 ## 5. License
 
